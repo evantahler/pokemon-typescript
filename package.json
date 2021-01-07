@@ -3,6 +3,7 @@
   "name": "type-sharing",
   "license": "Apache-2.0",
   "description": "An example project sharing Typescript Types between your Frontend and Backend",
+  "homepage": "https://github.com/evantahler/type-sharing",
   "version": "0.1.0",
   "engines": {
     "node": ">=12.0.0 <15.0.0"
