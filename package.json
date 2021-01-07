@@ -1,0 +1,53 @@
+{
+  "author": "Evan Tahler <evan@evantahler.com>",
+  "name": "type-sharing",
+  "license": "Apache-2.0",
+  "description": "An example project sharing Typescript Types between your Frontend and Backend",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=12.0.0 <15.0.0"
+  },
+  "scripts": {
+    "build": "npm run build-api && npm run build-web",
+    "build-api": "cd api && rm -rf dist && tsc --declaration",
+    "build-web": "cd web && next build",
+    "start": "cd api && node ./dist/server.js",
+    "dev": "cd api && ts-node-dev --ignore-watch ../web ./src/server.ts",
+    "test": "npm run test-api && npm run test-web",
+    "pretest": "npm run lint && npm run build",
+    "test-api": "cd api && jest --maxWorkers 5",
+    "test-web": "cd web && jest --maxWorkers 5",
+    "lint": "npm run lint-api && npm run lint-web",
+    "lint-api": "cd api && prettier --check src __tests__",
+    "lint-web": "cd web && prettier --check pages hooks client components __tests__",
+    "nuke": "rm -rf node_modules && rm -rf api/dist && rm -rf web/.next"
+  },
+  "dependencies": {
+    "actionhero": "^25.0.2",
+    "ah-next-plugin": "^0.4.0",
+    "bootstrap": "^4.5.3",
+    "bootswatch": "^4.5.3",
+    "ioredis": "^4.19.4",
+    "next": "10.0.4",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.14.0",
+    "sass": "^1.32.2",
+    "swagger-ui": "^3.38.0",
+    "winston": "^3.3.3",
+    "ws": "^7.4.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.19",
+    "@types/node": "^14.14.19",
+    "@types/react-dom": "^17.0.0",
+    "@types/validator": "^13.1.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "jest": "26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.4.4",
+    "ts-node-dev": "1.1.1",
+    "typescript": "^4.1.3"
+  }
+}

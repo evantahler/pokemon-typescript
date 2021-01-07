@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+if [ $1 ]; then
+  echo "creating database chat_test_$1"
+  if [ -n "$CI" ]; then
+    `createdb "chat_test_$1" --host localhost --user postgres`
+  else
+    `createdb "chat_test_$1"`
+  fi
+else
+  n=5
+  for ((i=1; i<=n; i++)) {
+    echo "creating database chat_test_$i"
+    if [ -n "$CI" ]; then
+      `createdb "chat_test_$i" --host localhost --user postgres`
+    else
+      `createdb "chat_test_$i"`
+    fi
+  }
+fi
+
+
