@@ -18,7 +18,7 @@ export class PokemonList extends Action {
       params.type
         ? monster.type1 === params.type || monster.type2 === params.type
         : true
-    ).slice(params.offset, params.limit);
+    ).slice(params.offset, params.offset + params.limit);
 
     return { pokemon };
   }

@@ -4,9 +4,11 @@
     "allowJs": true,
     "module": "commonjs",
     "target": "es2018",
+    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "downlevelIteration": true
   },
   "include": ["./src/**/*"]
 }

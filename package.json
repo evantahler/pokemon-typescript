@@ -1,9 +1,9 @@
 {
   "author": "Evan Tahler <evan@evantahler.com>",
-  "name": "type-sharing",
+  "name": "pokemon-typescript",
   "license": "Apache-2.0",
   "description": "An example project sharing Typescript Types between your Frontend and Backend",
-  "homepage": "https://github.com/evantahler/type-sharing",
+  "homepage": "https://github.com/evantahler/pokemon-typescript",
   "version": "0.1.0",
   "engines": {
     "node": ">=12.0.0 <15.0.0"
@@ -20,7 +20,7 @@
     "test-web": "cd web && jest --maxWorkers 5",
     "lint": "npm run lint-api && npm run lint-web",
     "lint-api": "cd api && prettier --check src __tests__",
-    "lint-web": "cd web && prettier --check pages hooks client components __tests__",
+    "lint-web": "cd web && prettier --check pages components __tests__",
     "nuke": "rm -rf node_modules && rm -rf api/dist && rm -rf web/.next"
   },
   "dependencies": {
