@@ -6,7 +6,7 @@ export default function Header() {
       <br />
       <header>
         <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/">Type Sharing Demo</Navbar.Brand>
+          <Navbar.Brand href="/">Pokemon Typescript</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

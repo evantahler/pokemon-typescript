@@ -1,5 +1,5 @@
 import { Action } from "actionhero";
-import PokemonData from "../../../data/pokemon.json";
+import PokemonData from "../data/pokemon.json";
 
 export class PokemonList extends Action {
   constructor() {
