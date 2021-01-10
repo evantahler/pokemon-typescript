@@ -4,6 +4,8 @@ export const DEFAULT = {
     return {
       get: [
         { path: "/:apiVersion/status", action: "status" },
+        { path: "/:apiVersion/pokemon/list", action: "pokemon:list" },
+        { path: "/:apiVersion/pokemon/types", action: "pokemon:types" },
         { path: "/:apiVersion/swagger", action: "swagger" },
       ],
 

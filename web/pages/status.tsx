@@ -18,6 +18,14 @@ export default function StatusPage(props) {
         </thead>
         <tbody>
           <tr>
+            <td>Server Name</td>
+            <td>{serverStatus.name}</td>
+          </tr>
+          <tr>
+            <td>Server Description</td>
+            <td>{serverStatus.description}</td>
+          </tr>
+          <tr>
             <td>ID</td>
             <td>{serverStatus.id}</td>
           </tr>

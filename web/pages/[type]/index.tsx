@@ -1,7 +1,8 @@
-import { UnwrapPromise } from "../utils/unwrapPromise";
-import { PokemonList, PokemonTypes } from "../../api/src/actions/pokemon";
+import { UnwrapPromise } from "../../utils/unwrapPromise";
+import { PokemonList, PokemonTypes } from "../../../api/src/actions/pokemon";
 import { Table } from "react-bootstrap";
-import { TypeButtons } from "../components/typeButtons";
+import { TypeButtons } from "../../components/typeButtons";
+import { useRouter } from "next/router";
 
 type ListApiResponse = UnwrapPromise<typeof PokemonList.prototype.run>;
 type TypesApiResponse = UnwrapPromise<typeof PokemonTypes.prototype.run>;
@@ -20,9 +21,11 @@ export default function IndexPage(props) {
     types: TypesApiResponse["types"];
   } = props;
 
+  const router = useRouter();
+
   return (
     <>
-      <TypeButtons types={types} activeType="" />
+      <TypeButtons types={types} activeType={router.query.type as string} />
 
       <Table striped bordered hover size="sm">
         <thead>
@@ -57,9 +60,10 @@ export default function IndexPage(props) {
   );
 }
 
-IndexPage.getInitialProps = async () => {
+IndexPage.getInitialProps = async ({ query }) => {
+  const { type } = query;
   const pokemonResponse = await fetch(
-    `${process.env.API_URL}/api/1/pokemon/list`
+    `${process.env.API_URL}/api/1/pokemon/list?type=${type}`
   );
 
   const typesResponse = await fetch(
