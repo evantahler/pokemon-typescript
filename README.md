@@ -2,7 +2,7 @@
 
 ![Node.js CI](https://github.com/evantahler/pokemon-typescript/workflows/Node.js%20CI/badge.svg)
 
-A Presenation for SeattleJS 2021
+A Presentation for SeattleJS 2021
 
 - **Slides**: https://docs.google.com/presentation/d/1LrG0ptT7K-AG1d_1f_mefgVLUGm-TcEqzPdP7n0jf_4/edit?usp=sharing
 - **Pitch**: https://github.com/seattlejs/seattlejs/issues/191
