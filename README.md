@@ -17,5 +17,5 @@ A Presentation for SeattleJS 2021
 
 ## Attribution
 
-Pokemon data from https://www.kaggle.com/rounakbanik/pokemon
-Pokemon images from https://pokeres.bastionbot.org
+- Pokemon data from https://www.kaggle.com/rounakbanik/pokemon
+- Pokemon images from https://pokeres.bastionbot.org
