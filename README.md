@@ -7,7 +7,7 @@ A Presentation for SeattleJS 2021
 - **Slides**: https://docs.google.com/presentation/d/1LrG0ptT7K-AG1d_1f_mefgVLUGm-TcEqzPdP7n0jf_4/edit?usp=sharing
 - **Pitch**: https://github.com/seattlejs/seattlejs/issues/191
 - **Demo**: https://pokemon-typescript.herokuapp.com
-- **Video**: https://www.youtube.com/watch?v=tJtL4LtKQnA&t=119s
+- **Video**: https://www.youtube.com/watch?v=tJtL4LtKQnA
 
 ## Setup
 
